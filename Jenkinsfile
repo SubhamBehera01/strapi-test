@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/SubhamBehera01/strapi-test.git', branch: 'master'
+                git credentialsId: 'subham', url: 'https://github.com/SubhamBehera01/strapi-test', branch: 'master'
             }
         }
 

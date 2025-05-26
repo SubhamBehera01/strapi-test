@@ -5,13 +5,13 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy dependencies definition
-COPY package*.json ./
+COPY foodadvisor-master/client/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy all files
-COPY . .
+COPY foodadvisor-master .
 
 # Build the Next.js app
 RUN npm run build
