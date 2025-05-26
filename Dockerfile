@@ -11,7 +11,7 @@ COPY foodadvisor-master/client/package*.json ./
 RUN npm install
 
 # Copy all files
-COPY foodadvisor-master .
+COPY foodadvisor-master/client .
 
 # Build the Next.js app
 RUN npm run build
